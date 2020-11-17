@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <a href="/random">Random jokes</a>
+        <a href="/">home</a>
+    </header>
+    <%if(result.length>0){%>
+
+
+    <%result.forEach(element=>{%>
+    <div>
+
+        <h3><%= element.type%></h3>
+        <p><%= element.setup%></p>
+        <p><%= element.punchline%></p>
+        <a href="/Fav/<%= element.id%>">veiw details</a>
+    </div>
+    <%})%>
+    <%}else{%>
+    <p>no available jokes</p>
+    <%}%>
+</body>
+
+</html>

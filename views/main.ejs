@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <a href="/random">Random jokes</a>
+    </header>
+
+    <%result.forEach(element=>{%>
+    <div>
+
+        <h2><%= element.id%></h2>
+        <h3><%= element.type%></h3>
+        <p><%= element.setup%></p>
+        <p><%= element.punchline%></p>
+        <form action="/Fav" method="POST">
+            <input type="text" name="id" value="<%= element.id%>" style="display: none;">
+            <input type="text" name="type" value="<%= element.type%>" style="display: none;">
+            <input type="text" name="setup" value="<%= element.setup%>" style="display: none;">
+            <input type="text" name="punchline" value="<%= element.punchline%>" style="display: none;">
+            <button type="submit"> Add-to-my-jokes-list </button>
+        </form>
+    </div>
+    <%})%>
+</body>
+
+</html>

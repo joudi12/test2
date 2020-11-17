@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <a href="/random">Random jokes</a>
+        <a href="/">home</a>
+    </header>
+    <h3><%= result.type%></h3>
+    <p><%= result.setup%></p>
+    <p><%= result.punchline%></p>
+    <form action="/Fav/<%= result.id%>?_method=PUT" method="POST">
+
+        <input type="text" name="type" value="<%= result.type%>">
+        <input type="text" name="setup" value="<%= result.setup%>">
+        <input type="text" name="punchline" value="<%= result.punchline%>">
+        <button type="submit"> update </button>
+    </form>
+    <form action="/Fav/<%= result.id%>?_method=DELETE" method="POST">
+
+        <button type="submit"> Delete </button>
+    </form>
+</body>
+
+</html>

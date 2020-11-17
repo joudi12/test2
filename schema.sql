@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS book;
+
+ CREATE TABLE book(
+ id SERIAL PRIMARY KEY,
+ number VARCHAR(255),
+ type VARCHAR(255),
+setup VARCHAR(100000),
+punchline VARCHAR(100000)
+ )
